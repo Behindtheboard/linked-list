@@ -1,13 +1,6 @@
-// import { Node } from "./node";
+import { Node } from "./node";
 
-class Node {
-  constructor() {
-    this.value = null;
-    this.next = null;
-  }
-}
-
-function linkedList() {
+export default function linkedList() {
   let head = null;
   let size = 0;
   let current;
@@ -124,7 +117,7 @@ function linkedList() {
       newNode.next = current.next;
       current.next = newNode;
     }
-    size++
+    size++;
   }
 
   function removeAt(index) {
@@ -138,7 +131,7 @@ function linkedList() {
       let remaining = current.next.next;
       current.next = remaining;
     }
-    size--
+    size--;
   }
 
   return {
@@ -176,5 +169,5 @@ console.log(list.find("snake"));
 console.log(list.toString());
 console.log(list.insertAt("monkey", 4));
 console.log(list.toString());
-console.log(list.removeAt(4))
+console.log(list.removeAt(4));
 console.log(list.toString());
