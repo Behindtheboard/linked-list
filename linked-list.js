@@ -61,7 +61,7 @@ export default function linkedList() {
 
   function pop() {
     current = head;
-    for (i = 2; i < size; i++) {
+    while (current.next.next) {
       current = current.next;
     }
     current.next = null;
