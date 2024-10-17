@@ -124,6 +124,7 @@ function linkedList() {
       newNode.next = current.next;
       current.next = newNode;
     }
+    size++
   }
 
   function removeAt(index) {
@@ -137,6 +138,7 @@ function linkedList() {
       let remaining = current.next.next;
       current.next = remaining;
     }
+    size--
   }
 
   return {
